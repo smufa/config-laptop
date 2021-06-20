@@ -21,6 +21,7 @@ set $term alacritty
 # on the original workspace that the command was run on.
 #set $menu dmenu_path | dmenu -fn 'FiraCode-13' | xargs swaymsg exec --
 set $menu exec wofi --show run -l 2 -W 400 -H 250 -b
+set $bmenu exec bemenu-run --fn "FiraCode" --nb "#1c2332" --tb "#30365F" --hb "#30365F" --tf "#5ccc96" --hf "#5ccc96" --fb "#1c2332"
 
 
 ### Output configuration
@@ -90,6 +91,9 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 
     # Start your launcher
     bindsym $mod+d exec $menu
+
+    # Start your (alternate) launcher
+    bindsym $mod+x exec $bmenu
 
     # Screenshot
     bindsym Print exec grim -g "$(slurp)" - | wl-copy

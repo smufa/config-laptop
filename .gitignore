@@ -1,7 +1,12 @@
 /*
+nvim/*
+*.bckup
 
 !.gitignore
 !wofi/
 !waybar/
 !sway/
 !scripts/
+!alacritty/
+!mako/
+!nvim/init.vim
