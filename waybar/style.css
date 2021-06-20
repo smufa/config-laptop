@@ -1,0 +1,158 @@
+* {
+	border: none;
+	background: rgba(28, 35, 50, 1);
+	font-family: "FiraCode";
+	font-size: 15;
+	min-height: 0;
+}
+
+#waybar {
+/*	background: rgba(48,48,59, 0);*/
+	color: #ffffff;
+}
+
+#window {
+	color: #e4e4e4;
+	font-weight: bold;
+}
+
+#workspaces {
+	font-size: 8px;
+/*	padding: 0 2px;*/
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	background: #30365F;
+}
+
+#workspaces button {
+	padding: 0 5px;
+	background: #30365F;
+	color: #b8b8b8;
+/*	margin: 0 1px;*/ 
+}
+#workspaces button.visible {
+	background: #30365F;
+
+}
+
+#workspaces button.persistent {
+	background: #30365F;
+
+}
+
+#workspaces button.focused {
+	padding: 0 5px;
+/*	background: #00afd7;*/
+	color: #8af0f0;
+	margin: 0 0px;
+	background: #30365F;
+}
+
+#workspaces button.urgent {
+	background: #af005f;
+	color: #1b1d1e;
+}
+
+#mode {
+	background: #af005f;
+}
+
+#clock, #custom-jalalidate, #custom-weather, #custom-disk_home, #custom-disk_root,#custom-wkblayout, #temperature, #cpu, #memory, #network, #backlight, #pulseaudio, #battery, #idle_inhibitor {
+	padding: 0 3px;
+/*	background-color: #000000; */
+/*	margin: 0 2px;*/
+}
+
+#custom-disk_root {
+}
+
+#custom-weather {
+	background: #30365F;
+}
+
+#custom-jalalidate {
+	margin-right: 8px;
+}
+
+#battery {
+    background-color: #ce6f8f;
+    color: #000000;
+}
+
+#clock {
+	background: #30365F;
+}
+
+#battery icon {
+    color: red;
+}
+
+#battery.charging {
+}
+
+@keyframes blink {
+    to {
+        background-color: #af005f;
+    }
+}
+
+#battery.warning:not(.charging) {
+	background-color: #ff8700;
+	color: #1b1d1e;
+}
+#battery.critical:not(.charging) {
+    color: white;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#cpu {
+    background-color: #5ccc96;
+    color: #000000;
+}
+
+#memory {
+    background-color: #f2ce00;
+    color: #000000;
+}
+
+#network {
+    background-color: #b3a1e6;
+    color: #000000;
+}
+
+#network.disconnected {
+    background: #f53c3c;
+}
+
+#backlight {
+    background-color: #7a5ccc;
+    color: #000000;
+}
+
+#pulseaudio {
+    background-color: #00a3cc;
+    color: #000000;
+}
+
+#pulseaudio.muted {
+    background-color: #00a3cc;
+}
+
+#tray {
+    background-color: #30365F;
+    color: #30365F;
+    background: #30365F;
+	margin-left: 1px;
+	padding: 0 3px;
+}
+
+#tray icon {
+    background-color: #30365F;
+    color: #30365F;
+}
