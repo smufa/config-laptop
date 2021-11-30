@@ -78,6 +78,7 @@ set shortmess+=c
 lua require'lspconfig'.rust_analyzer.setup{ on_attach=require'completion'.on_attach }
 lua require'lspconfig'.clangd.setup{on_attach=require'completion'.on_attach}
 lua require'lspconfig'.gopls.setup{on_attach=require'completion'.on_attach}
+lua require'lspconfig'.pyright.setup{on_attach=require'completion'.on_attach}
 lua << EOF
 local nvim_lsp = require('lspconfig')
 local on_attach = function(client, bufnr)
@@ -86,7 +87,7 @@ local on_attach = function(client, bufnr)
 
 -- Use a loop to conveniently both setup defined servers 
 -- and map buffer local keybindings when the language server attaches
-local servers = { "rust_analyzer", "clangd", "gopls" }
+local servers = { "rust_analyzer", "clangd", "gopls", "pyright" }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup { on_attach = on_attach, capabilities=capabilities }
 end
